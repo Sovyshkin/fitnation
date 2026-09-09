@@ -1,0 +1,2 @@
+"""FITNATION notification service."""
+

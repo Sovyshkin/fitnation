@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Следующий платёж завтра{% endblock %}{% block content %}
+<h1 style="margin:0 0 18px;color:#A92B83;font-size:30px;">{{ recipient_name }}, платёж уже завтра</h1>
+<p style="font-size:18px;font-weight:600;line-height:1.5;">Списание по подписке запланировано на <strong>{{ next_payment_date }}</strong>{% if payment_amount %}, сумма — {{ payment_amount }} ₽{% endif %}. Пожалуйста, проверьте способ оплаты.</p>
+{% endblock %}

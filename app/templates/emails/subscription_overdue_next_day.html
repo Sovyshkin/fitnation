@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Напоминание о платеже{% endblock %}{% block content %}
+<h1 style="margin:0 0 18px;color:#A92B83;font-size:30px;">{{ recipient_name }}, проверьте оплату</h1>
+<p style="font-size:18px;font-weight:600;line-height:1.5;">Повторное списание по подписке не прошло. Обновите платёжные данные или обратитесь в поддержку{% if payment_amount %}. Сумма — {{ payment_amount }} ₽{% endif %}.</p>
+{% endblock %}

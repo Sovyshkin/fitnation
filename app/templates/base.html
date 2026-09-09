@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}FITNATION{% endblock %}</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f4f3f5;color:#202024;font-family:Arial,Helvetica,sans-serif;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f4f3f5;">
+      <tr>
+        <td align="center" style="padding:24px 12px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;background:#ffffff;border-radius:18px;overflow:hidden;">
+            <tr>
+              <td style="padding:28px 36px;background:#A92B83;">
+                <img src="{{ logo_url }}" width="180" alt="FITNATION" style="display:block;max-width:180px;height:auto;border:0;color:#ffffff;font-size:24px;font-weight:bold;">
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:38px 36px;">
+                {% block content %}{% endblock %}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:24px 36px;background:#f8f7f9;color:#67616a;font-size:14px;line-height:1.5;">
+                Это транзакционное письмо от {{ club_name }}.<br>
+                Нужна помощь? <a href="{{ support_url }}" style="color:#A92B83;font-weight:bold;">Напишите нам</a>.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

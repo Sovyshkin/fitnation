@@ -1,0 +1,30 @@
+[Unit]
+Description=FITNATION Notification Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=fitnation
+Group=fitnation
+WorkingDirectory=/opt/fitnation
+EnvironmentFile=/opt/fitnation/.env
+ExecStart=/opt/fitnation/venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

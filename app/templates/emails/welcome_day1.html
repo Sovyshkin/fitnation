@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Добро пожаловать в FITNATION{% endblock %}
+{% block content %}
+<h1 style="margin:0 0 18px;color:#A92B83;font-size:32px;line-height:1.2;">{{ recipient_name }}, отлично, что Вы с нами!</h1>
+<p style="margin:0 0 26px;font-size:19px;font-weight:700;line-height:1.5;">Теперь Вы стали частью FITNATION.</p>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 26px;background:#EAFF36;border-radius:14px;">
+  <tr><td style="padding:22px 24px;font-size:22px;font-weight:700;">Воспользуйтесь Welcome Pack</td></tr>
+</table>
+<p style="margin:0 0 16px;font-size:18px;font-weight:600;line-height:1.5;">Мы дарим Вам <strong><u>500 баллов</u></strong>, которые Вы можете потратить в нашем Магазине в мобильном приложении.</p>
+<p style="margin:0 0 16px;font-size:18px;font-weight:600;line-height:1.5;">Мы дарим Вам <strong><u>1 вводную персональную тренировку</u></strong> — запись через администратора. Это возможность познакомиться с оборудованием и техникой выполнения упражнений, чтобы чувствовать себя увереннее в тренажёрном зале.</p>
+<p style="margin:0 0 16px;font-size:18px;font-weight:600;line-height:1.5;">Мы дарим Вам <strong><u>замок для шкафчика</u></strong>.</p>
+<p style="margin:0 0 16px;font-size:18px;font-weight:600;line-height:1.5;">Мы дарим Вам <strong><u>1 напиток на выбор</u></strong> — обратитесь к администратору.</p>
+<p style="margin:0 0 24px;font-size:18px;font-weight:600;line-height:1.5;">Дополнительно Welcome Pack включает сохранение стоимости платежа.</p>
+<table role="presentation" cellspacing="0" cellpadding="0" border="0"><tr><td style="border-radius:8px;background:#A92B83;"><a href="{{ support_url }}" style="display:inline-block;padding:14px 22px;color:#ffffff;text-decoration:none;font-size:17px;font-weight:bold;">Чат поддержки</a></td></tr></table>
+{% endblock %}

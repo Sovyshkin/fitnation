@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% block title %}Не удалось провести платёж{% endblock %}{% block content %}
+<h1 style="margin:0 0 18px;color:#A92B83;font-size:30px;">{{ recipient_name }}, платёж не прошёл</h1>
+<p style="font-size:18px;font-weight:600;line-height:1.5;">Пожалуйста, проверьте баланс и данные карты, чтобы подписка продолжила действовать{% if payment_amount %}. Сумма платежа — {{ payment_amount }} ₽{% endif %}.</p>
+{% endblock %}

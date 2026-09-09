@@ -15,7 +15,6 @@ def test_welcome_template_renders_and_escapes() -> None:
             "recipient_name": "<Анна>",
             "club_name": "FITNATION",
             "support_url": "https://example.com/support",
-            "logo_url": "https://example.com/logo.png",
         },
     )
     assert "&lt;Анна&gt;" in html
@@ -32,7 +31,6 @@ def test_all_email_templates_render() -> None:
         "recipient_name": "Анна",
         "club_name": "FITNATION",
         "support_url": "https://example.com/support",
-        "logo_url": "https://example.com/logo.png",
         "tariff_name": "Premium",
         "payment_amount": "3900",
         "next_payment_date": "15.09.2026",

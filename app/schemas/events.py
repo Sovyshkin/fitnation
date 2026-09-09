@@ -44,9 +44,8 @@ class EventData(BaseModel):
     payment_amount: str | None = Field(default=None, max_length=50)
     next_payment_date: str | None = Field(default=None, max_length=50)
     membership_end_date: str | None = Field(default=None, max_length=50)
-    logo_url: HttpUrl | None = None
 
-    @field_validator("support_url", "logo_url")
+    @field_validator("support_url")
     @classmethod
     def require_https(cls, value: HttpUrl | None) -> HttpUrl | None:
         if value is not None:

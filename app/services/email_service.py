@@ -3,8 +3,13 @@ import socket
 import ssl
 from email.message import EmailMessage
 from email.utils import formataddr
+from pathlib import Path
 
 from app.config import Settings
+
+
+LOGO_PATH = Path(__file__).resolve().parent.parent / "assets" / "fitnation-logo.png"
+LOGO_CONTENT_ID = "fitnation-logo"
 
 
 class EmailDeliveryError(RuntimeError):
@@ -35,6 +40,15 @@ class EmailService:
         message["Reply-To"] = str(self._settings.smtp_reply_to)
         message.set_content(text_body)
         message.add_alternative(html_body, subtype="html")
+        with LOGO_PATH.open("rb") as logo_file:
+            message.get_payload()[-1].add_related(
+                logo_file.read(),
+                maintype="image",
+                subtype="png",
+                cid=f"<{LOGO_CONTENT_ID}>",
+                filename="fitnation-logo.png",
+                disposition="inline",
+            )
 
         smtp: smtplib.SMTP_SSL | None = None
         try:

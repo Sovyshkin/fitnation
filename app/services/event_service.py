@@ -68,7 +68,6 @@ class EventService:
             "recipient_name": request.recipient.name,
             "club_name": supplied_data.get("club_name", "FITNATION"),
             "support_url": supplied_data.get("support_url", str(self._settings.support_url)),
-            "logo_url": supplied_data.get("logo_url", str(self._settings.logo_url)),
             "tariff_name": supplied_data.get("tariff_name", ""),
             "payment_amount": supplied_data.get("payment_amount", ""),
             "next_payment_date": supplied_data.get("next_payment_date", ""),

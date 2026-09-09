@@ -32,6 +32,8 @@ def test_email_service_sends_multipart_message(smtp_ssl: MagicMock) -> None:
     message = smtp.send_message.call_args.args[0]
     assert message.is_multipart()
     assert message["Reply-To"] == "hello@example.com"
+    logo_part = next(part for part in message.walk() if part.get("Content-ID") == "<fitnation-logo>")
+    assert logo_part.get_content_type() == "image/png"
     smtp.quit.assert_called_once()
 
 

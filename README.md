@@ -50,9 +50,8 @@ curl http://127.0.0.1:8000/health
 - `API_KEY` — случайная строка длиной не менее 16 символов;
 - `SMTP_PASSWORD` — пароль приложения Яндекс, не обычный пароль аккаунта;
 - `SUPPORT_URL` — ссылка на чат поддержки;
-- `LOGO_URL` — публичный HTTPS URL логотипа, доступный почтовым клиентам.
 
-Также проверьте `SMTP_USER`, `SMTP_FROM` и `SMTP_REPLY_TO`. Для FITNATION они равны `hello@fitnation.ru`. В production задайте `APP_ENV=production`. `SUPPORT_URL` и `LOGO_URL` должны использовать HTTPS. Секреты нельзя добавлять в systemd unit, Git или команды shell history. Если значение в `.env` содержит пробелы или `#`, заключите его в двойные кавычки — файл одновременно читают systemd и приложение.
+Также проверьте `SMTP_USER`, `SMTP_FROM` и `SMTP_REPLY_TO`. Для FITNATION они равны `hello@fitnation.ru`. В production задайте `APP_ENV=production`. `SUPPORT_URL` должен использовать HTTPS. Логотип хранится в репозитории и добавляется к письму как inline-вложение. Секреты нельзя добавлять в systemd unit, Git или команды shell history. Если значение в `.env` содержит пробелы или `#`, заключите его в двойные кавычки — файл одновременно читают systemd и приложение.
 
 ## API
 

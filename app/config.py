@@ -25,7 +25,6 @@ class Settings(BaseSettings):
     smtp_timeout: float = Field(default=20, gt=0, le=120)
 
     support_url: HttpUrl = HttpUrl("https://fitnation.ru")
-    logo_url: HttpUrl = HttpUrl("https://fitnation.ru/logo.png")
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
 
     model_config = SettingsConfigDict(
@@ -42,7 +41,7 @@ class Settings(BaseSettings):
             raise ValueError("must not contain line breaks")
         return value
 
-    @field_validator("support_url", "logo_url")
+    @field_validator("support_url")
     @classmethod
     def require_https(cls, value: HttpUrl) -> HttpUrl:
         if value.scheme != "https":

@@ -62,6 +62,7 @@ class EventRequest(BaseModel):
     event: EventType
     recipient: Recipient
     data: EventData = Field(default_factory=EventData)
+    event_id: str | None = Field(default=None, min_length=1, max_length=200, pattern=r"^[A-Za-z0-9._:-]+$")
 
 
 class TestEmailRequest(BaseModel):

@@ -57,6 +57,11 @@ curl http://127.0.0.1:8000/health
 
 Все служебные POST endpoints принимают ключ в заголовке `X-API-Key`.
 
+Для событий из 1С передавайте уникальный `event_id`. Backend сохраняет успешно отправленные
+идентификаторы: повтор того же события получит `status: "duplicate"` и не создаст второе письмо.
+В production задайте `EVENT_STORE_PATH=/var/lib/fitnation/event-deliveries.sqlite3`; systemd unit
+создаёт этот каталог через `StateDirectory=fitnation`.
+
 Отправка события из 1С:
 
 ```bash

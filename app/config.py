@@ -26,6 +26,8 @@ class Settings(BaseSettings):
 
     support_url: HttpUrl = HttpUrl("https://fitnation.ru")
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
+    event_store_path: Path = BASE_DIR / "var" / "event-deliveries.sqlite3"
+    event_processing_ttl_seconds: int = Field(default=900, ge=60, le=86400)
 
     model_config = SettingsConfigDict(
         env_file=BASE_DIR / ".env",

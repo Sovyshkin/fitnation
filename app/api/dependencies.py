@@ -2,6 +2,7 @@ from functools import lru_cache
 
 from app.config import BASE_DIR, get_settings
 from app.services.email_service import EmailService
+from app.services.delivery_store import EventDeliveryStore
 from app.services.event_service import EventService
 from app.services.template_service import TemplateService
 
@@ -15,3 +16,8 @@ def get_event_service() -> EventService:
         email_service=EmailService(settings),
     )
 
+
+@lru_cache
+def get_event_delivery_store() -> EventDeliveryStore:
+    settings = get_settings()
+    return EventDeliveryStore(settings.event_store_path, settings.event_processing_ttl_seconds)

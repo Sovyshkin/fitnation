@@ -16,7 +16,7 @@ class RootResponse(BaseModel):
 
 
 class EventSentResponse(BaseModel):
-    status: Literal["sent"]
+    status: Literal["sent", "duplicate"]
     event: EventType
     recipient: EmailStr
 
@@ -25,4 +25,3 @@ class ErrorResponse(BaseModel):
     status: Literal["error"] = "error"
     code: str
     message: str
-

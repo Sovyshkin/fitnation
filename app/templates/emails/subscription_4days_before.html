@@ -1,4 +1,5 @@
-{% extends "base.html" %}{% block title %}Следующий платёж через 4 дня{% endblock %}{% block content %}
-<h1 style="margin:0 0 18px;color:#A92B83;font-size:30px;">{{ recipient_name }}, напоминаем о платеже</h1>
-<p style="font-size:18px;font-weight:600;line-height:1.5;">Следующий платёж по подписке{% if tariff_name %} «{{ tariff_name }}»{% endif %} запланирован на <strong>{{ next_payment_date }}</strong>{% if payment_amount %}, сумма — {{ payment_amount }} ₽{% endif %}.</p>
+{% extends "base.html" %}{% block title %}Автоматическое списание через 3 дня{% endblock %}{% block content %}
+<p style="font-size:18px;font-weight:600;line-height:1.5;">{{ recipient_name }}, добрый день! Это FITNATION!</p>
+<p style="font-size:18px;font-weight:600;line-height:1.5;">Напоминаем Вам, что по вашему контракту <strong>формата подписки</strong>, через 3 дня, произойдет <strong>автоматическое списание</strong> для продления посещений клуба.</p>
+<p style="font-size:18px;font-weight:600;line-height:1.5;">Рады, что остаетесь с нами!<br>Если возникнут вопросы, напишите нам <a href="{{ support_url }}" style="color:#A92B83;font-weight:bold;">ссылка на ТГ сервис</a></p>
 {% endblock %}

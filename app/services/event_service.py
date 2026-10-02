@@ -100,7 +100,7 @@ class EventService:
     @staticmethod
     def _plain_text(event: EventType, context: dict[str, str]) -> str:
         name = context["recipient_name"]
-        support = f"ссылка на ТГ сервис: {context['support_url']}"
+        support = "ссылка на ТГ сервис"
         messages = {
             EventType.WELCOME_DAY1: (
                 f"{name}, отлично, что Вы с нами! Теперь Вы стали частью Fitnation.\n\n"

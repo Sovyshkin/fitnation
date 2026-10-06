@@ -1,33 +1,8 @@
 <!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}FITNATION{% endblock %}</title>
-  </head>
-  <body style="margin:0;padding:0;background:#f4f3f5;color:#202024;font-family:Arial,Helvetica,sans-serif;">
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f4f3f5;">
-      <tr>
-        <td align="center" style="padding:24px 12px;">
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;background:#ffffff;border-radius:18px;overflow:hidden;">
-            <tr>
-              <td style="padding:28px 36px;background:#A92B83;">
-                <img src="cid:fitnation-logo" width="100" alt="FITNATION" style="display:block;max-width:100px;height:auto;border:0;color:#ffffff;font-size:24px;font-weight:bold;">
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:38px 36px;">
-                {% block content %}{% endblock %}
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:24px 36px;background:#f8f7f9;color:#67616a;font-size:14px;line-height:1.5;">
-                Это транзакционное письмо от {{ club_name }}.
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="x-apple-disable-message-reformatting"><title>{% block title %}FITNATION{% endblock %}</title></head>
+<body style="margin:0;padding:0;background:#f1eff1;color:#24242b;font-family:Verdana,Arial,sans-serif;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f1eff1;"><tr><td align="center" style="padding:28px 12px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:680px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 40px rgba(32,25,32,.12);">
+<tr><td style="padding:0;background:#202027;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="padding:25px 32px 20px;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td><span style="display:inline-block;background:#a92b83;border-radius:12px;padding:11px 13px;"><img src="cid:fitnation-logo" width="82" alt="FITNATION" style="display:block;border:0;width:82px;height:auto;"></span></td><td align="right" style="font-family:Georgia,serif;color:#eaff36;font-size:11px;font-weight:bold;letter-spacing:1.6px;text-transform:uppercase;">{% block label %}FITNATION CLUB{% endblock %}</td></tr></table></td></tr><tr><td style="height:6px;line-height:6px;font-size:0;background:#eaff36;">&nbsp;</td></tr></table></td></tr>
+<tr><td style="padding:38px 34px 14px;"><div style="font-size:11px;font-weight:bold;letter-spacing:1.7px;color:#a92b83;text-transform:uppercase;margin:0 0 13px;">{% block eyebrow %}ВАЖНОЕ СООБЩЕНИЕ{% endblock %}</div><div style="font-family:Georgia,'Times New Roman',serif;font-size:31px;line-height:1.18;font-weight:bold;letter-spacing:-.4px;color:#222229;">{% block headline %}{{ recipient_name }}{% endblock %}</div></td></tr>
+<tr><td style="padding:12px 34px 38px;">{% block content %}{% endblock %}</td></tr>
+<tr><td style="padding:20px 34px 24px;background:#f7f5f7;border-top:1px solid #ebe7ea;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="font-size:11px;line-height:16px;letter-spacing:1.3px;font-weight:bold;color:#827c84;text-transform:uppercase;">{{ club_name }}</td><td align="right" style="font-size:11px;line-height:16px;color:#827c84;">Тренируйся. Живи. Повторяй.</td></tr></table></td></tr>
+</table></td></tr></table></body></html>

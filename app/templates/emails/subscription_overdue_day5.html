@@ -1,4 +1,2 @@
-{% extends "base.html" %}{% block title %}Платёж ожидает 5 дней{% endblock %}{% block content %}
-<p style="font-size:18px;font-weight:600;line-height:1.5;">{{ recipient_name }}, добрый день!</p>
-<p style="font-size:18px;font-weight:600;line-height:1.5;">Хотим подчеркнуть, что расторгнув контракт, Вы можете потерять свой выгодный тариф, а так же при оформлении нового абонемента потребуется повторно оплачивать вступительный взнос. Оставайтесь с нами, для решения любых вопросов напишите нам <strong style="color:#A92B83;">ссылка на ТГ сервис</strong></p>
-{% endblock %}
+{% extends "base.html" %}{% block title %}Платёж ожидает уже 5 дней{% endblock %}{% block label %}ПОДПИСКА{% endblock %}{% block eyebrow %}СОХРАНИТЕ ВЫГОДНЫЙ ТАРИФ{% endblock %}{% block headline %}{{ recipient_name }}, добрый день!{% endblock %}{% block content %}
+<p style="margin:0;padding:22px;background:#fff7e7;border:1px solid #f2ddae;border-radius:18px;font-size:17px;line-height:27px;color:#504330;">Хотим подчеркнуть, что расторгнув контракт, Вы можете потерять свой выгодный тариф, а так же при оформлении нового абонемента потребуется повторно оплачивать вступительный взнос. Оставайтесь с нами, для решения любых вопросов напишите нам <strong style="color:#a92b83;">ссылка на ТГ сервис</strong></p>{% endblock %}

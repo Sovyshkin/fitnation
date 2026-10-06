@@ -1,4 +1,2 @@
-{% extends "base.html" %}{% block title %}Напоминание о платеже{% endblock %}{% block content %}
-<p style="font-size:18px;font-weight:600;line-height:1.5;">{{ recipient_name }}, добрый день! Это FITNATION!</p>
-<p style="font-size:18px;font-weight:600;line-height:1.5;">Не получилось до Вас дозвониться, доступ в клуб ограничен. Если вам необходима помощь, напишите нам <strong style="color:#A92B83;">ссылка на ТГ сервис</strong></p>
-{% endblock %}
+{% extends "base.html" %}{% block title %}Напоминание о платеже{% endblock %}{% block label %}ПОДПИСКА{% endblock %}{% block eyebrow %}ДОСТУП ОГРАНИЧЕН{% endblock %}{% block headline %}{{ recipient_name }}, добрый день! Это FITNATION!{% endblock %}{% block content %}
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#29282e;border-radius:18px;"><tr><td style="padding:23px;color:#fff;font-size:17px;line-height:27px;">Не получилось до Вас дозвониться, доступ в клуб ограничен. Если вам необходима помощь, напишите нам <strong style="color:#eaff36;">ссылка на ТГ сервис</strong></td></tr></table>{% endblock %}

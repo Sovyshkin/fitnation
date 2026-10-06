@@ -1,4 +1,2 @@
-{% extends "base.html" %}{% block title %}Мы скучаем по Вам{% endblock %}{% block content %}
-<p style="font-size:18px;font-weight:600;line-height:1.5;">{{ recipient_name }}, добрый день!</p>
-<p style="font-size:18px;font-weight:600;line-height:1.5;">Ваш абонемент закончился, но у нас всегда есть "второй шанс". Выбирайте FITNATION — это больше, чем просто тренировки! Напишите нам <strong style="color:#A92B83;">ссылка на ТГ сервис</strong></p>
-{% endblock %}
+{% extends "base.html" %}{% block title %}Мы скучаем по Вам{% endblock %}{% block label %}АБОНЕМЕНТ{% endblock %}{% block eyebrow %}ВТОРОЙ ШАНС{% endblock %}{% block headline %}{{ recipient_name }}, добрый день!{% endblock %}{% block content %}
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#eaff36;border-radius:18px;"><tr><td style="padding:24px;color:#29282e;font-size:18px;line-height:28px;"><strong style="font-family:Georgia,serif;font-size:23px;">Второй шанс</strong><br><br>Ваш абонемент закончился, но у нас всегда есть "второй шанс". Выбирайте FITNATION — это больше, чем просто тренировки! Напишите нам <strong style="color:#a92b83;">ссылка на ТГ сервис</strong></td></tr></table>{% endblock %}

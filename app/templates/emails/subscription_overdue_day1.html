@@ -1,4 +1,2 @@
-{% extends "base.html" %}{% block title %}Не удалось провести платёж{% endblock %}{% block content %}
-<p style="font-size:18px;font-weight:600;line-height:1.5;">{{ recipient_name }}, добрый день! Это FITNATION!</p>
-<p style="font-size:18px;font-weight:600;line-height:1.5;">Заметили, что по Вашему контракту не прошла оплата. Если вам необходима помощь, напишите нам <strong style="color:#A92B83;">ссылка на ТГ сервис</strong></p>
-{% endblock %}
+{% extends "base.html" %}{% block title %}Не удалось провести платёж{% endblock %}{% block label %}ПОДПИСКА{% endblock %}{% block eyebrow %}НУЖНА ВАША ПОМОЩЬ{% endblock %}{% block headline %}{{ recipient_name }}, добрый день! Это FITNATION!{% endblock %}{% block content %}
+<p style="margin:0;padding:22px;background:#fff3f5;border:1px solid #f1cbd4;border-radius:18px;font-size:17px;line-height:27px;color:#4b363b;">Заметили, что по Вашему контракту не прошла оплата. Если вам необходима помощь, напишите нам <strong style="color:#a92b83;">ссылка на ТГ сервис</strong></p>{% endblock %}
